@@ -1,0 +1,55 @@
+.loading {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #122b46;
+  &__wrapper {
+    width: 25em;
+    height: 50%;
+    display: flex;
+    display: flex;
+    justify-content: space-around;
+  }
+  .loading--logo1,
+  .loading--logo2 {
+    width: 9em;
+    max-width: 10em;
+    margin-bottom: 5em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation-name: logoScale;
+    animation-duration: 3000ms;
+    animation-delay: 0ms;
+    animation-iteration-count: infinite;
+  }
+  .loading--logo1 {
+    background-image: url("./assets/Sustainable_Development_Goals_logo.png");
+  }
+  .loading--logo2 {
+    background-image: url("./assets/endpoverty.png");
+  }
+}
+
+@keyframes logoScale {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@media screen and (min-width: 765px) {
+  .loading__wrapper {
+    width: 50em;
+  }
+  .loading--logo1,
+  .loading--logo2 {
+    width: 20em !important;
+    max-width: 20em !important;
+  }
+}
