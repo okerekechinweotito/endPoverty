@@ -4465,7 +4465,7 @@ table p {
 @media screen and (min-width:765px){
 .home-slider-area.slider-default {
   background-position: initial !important;
-  height: 35em !important;
+  height: 37em !important;
   margin-bottom:9em;
   animation-name: slider;
   animation-delay: 0s;
