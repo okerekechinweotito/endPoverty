@@ -4457,15 +4457,9 @@ table p {
 
 .home-slider-area.slider-default {
   position: relative;
-  animation-name: slider;
-  animation-delay: 0s;
-  animation-duration: 10000ms;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear; 
-  animation-direction: alternate; 
-  background-image: url('../img/slider/homebackground.jpg');
-  background-position: right !important;
-  background-size:contain;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('https://images.unsplash.com/photo-1494832944834-a08818c634b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80');
+  background-position: center !important;
+  background-size:cover;
 }
 
 @media screen and (min-width:765px){
@@ -4473,7 +4467,12 @@ table p {
   background-position: initial !important;
   height: 35em !important;
   margin-bottom:9em;
-}
+  animation-name: slider;
+  animation-delay: 0s;
+  animation-duration: 10000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+  animation-direction: alternate; 
 }
 
 
@@ -4488,6 +4487,8 @@ table p {
     background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('https://www.ox.ac.uk/sites/files/oxford/styles/ow_medium_feature/s3/field/field_image_main/OPHI.jpg?itok=di-qqCbb');
   } 
 } 
+}
+
 
 .home-slider-area.slider-default .home-slider-content .home-slider-item {
   height: 900px;
