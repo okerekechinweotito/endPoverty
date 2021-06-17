@@ -6,7 +6,7 @@
   function stylePreloader() {
     setTimeout(() => {
       $("body").addClass("preloader-deactive");
-    }, 5000);
+    }, 3000);
     
   }
 
