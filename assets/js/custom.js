@@ -6,8 +6,7 @@
   function stylePreloader() {
     setTimeout(() => {
       $("body").addClass("preloader-deactive");
-    }, 3000);
-    
+    }, 1000);
   }
 
   // Background Image
