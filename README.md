@@ -1,4 +1,4 @@
-# 🌐 Live @ https://endpoverty.herokuapp.com
+# 🌐 Live @ https://endpoverty.vercel.app
 
 # Team VENOM's Solution to Ingressive_4_Good Hackathon.
 
