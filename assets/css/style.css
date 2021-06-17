@@ -218,6 +218,7 @@ table p {
   position: absolute;
   top: calc(50% - 1.5px);
   width: 43px;
+  color:white;
 }
 .section-title .subtitle.line-theme-color:after {
   background-color: #fc6539;
@@ -5366,6 +5367,8 @@ table p {
 .about-area.about-default-area {
   padding: 146px 0 15px;
   position: relative;
+  background-color: #001D23;
+  color: #fff !important;
 }
 @media only screen and (max-width: 991px) {
   .about-area.about-default-area {
@@ -5408,7 +5411,7 @@ table p {
   }
 }
 .about-area .layer-style:before {
-  background-color: #fff;
+  background-color: #283E42;
   border-radius: 50%;
   content: "";
   height: 546px;
@@ -5460,7 +5463,7 @@ table p {
   }
 }
 .about-area .about-content .text-style {
-  color: #464444;
+  color: #fff;
   font-family: "Yeseva One", cursive;
   font-size: 22px;
   line-height: 1.364;
@@ -5502,7 +5505,7 @@ table p {
 .about-area .about-content .list-icon-style {
   align-items: center;
   display: flex;
-  color: #001d23;
+  color: #fff;
   font-size: 15px;
   font-weight: 700;
   justify-content: space-between;
@@ -5613,7 +5616,7 @@ table p {
   }
 }
 .about-page-wrapper .about-area .about-content .text-style {
-  color: #001d23;
+  color: #fff;
   margin-right: 0;
 }
 @media only screen and (max-width: 767px) {
@@ -5688,6 +5691,7 @@ table p {
   padding: 135px 0 0;
   position: relative;
   z-index: 1;
+
 }
 @media (max-width: 1799px) {
   .service-area.service-default-area {
