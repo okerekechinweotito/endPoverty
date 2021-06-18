@@ -218,7 +218,6 @@ table p {
   position: absolute;
   top: calc(50% - 1.5px);
   width: 43px;
-  color:white;
 }
 .section-title .subtitle.line-theme-color:after {
   background-color: #fc6539;
@@ -3359,15 +3358,16 @@ table p {
   border-bottom: 0;
 }
 .res-mobile-menu .slicknav_nav li a {
-  color: #999999;
-  font-size: 36px;
+  color: #fff;
+  font-size: 17px !important;
   font-weight: 500;
-  line-height: 1;
-  padding: 15px 30px;
+  line-height: 3;
+  padding: 15px 30px ;
   margin: 0;
   text-transform: capitalize;
   position: relative;
 }
+
 @media only screen and (max-width: 575px) {
   .res-mobile-menu .slicknav_nav li a {
     font-size: 16px;
@@ -3376,7 +3376,7 @@ table p {
 }
 .res-mobile-menu .slicknav_nav li a .slicknav_arrow {
   background-color: transparent;
-  color: #878b93;
+   color: #fff;
   font-size: 17px;
   display: block;
   text-align: center;
@@ -3414,7 +3414,7 @@ table p {
   }
 }
 .res-mobile-menu .slicknav_nav li ul li a {
-  color: #999999;
+  color: #fff;
   font-size: 24px;
   padding: 12px 30px;
 }
@@ -4105,7 +4105,7 @@ table p {
 .off-canvas-wrapper .btn-close {
   background: none;
   border: none;
-  color: #999999;
+  color: #fff;
   font-size: 30px;
   line-height: 1;
   opacity: 1;
@@ -4129,7 +4129,7 @@ table p {
   line-height: 1;
 }
 .off-canvas-wrapper .btn-close:hover {
-  color: #0e0e0e;
+  color:  #fc6539;
 }
 .off-canvas-wrapper .off-canvas-inner {
   background-color: transparent;
@@ -4143,7 +4143,7 @@ table p {
   z-index: 3;
 }
 .off-canvas-wrapper .off-canvas-inner .off-canvas-content {
-  background-color: #fff;
+  background-color:#122B46;
   height: 100%;
   padding: 0 50px;
   position: relative;
@@ -4435,6 +4435,7 @@ table p {
   li
   i {
   color: #595959;
+  
   font-size: 14px;
   width: 27px;
 }
