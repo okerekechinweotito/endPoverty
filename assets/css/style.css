@@ -3339,12 +3339,13 @@ table p {
 /* Responsive Mobile Menu */
 .res-mobile-menu {
   margin: 0 -10px;
+  background-color: #fea444;
 }
 .res-mobile-menu .slicknav_btn {
   display: none;
 }
 .res-mobile-menu .slicknav_menu {
-  background-color: transparent;
+  background-color: #fea444;
   padding: 0;
 }
 .res-mobile-menu .slicknav_nav {
