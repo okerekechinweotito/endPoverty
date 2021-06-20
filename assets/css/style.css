@@ -5617,7 +5617,7 @@ table p {
   }
 }
 .about-page-wrapper .about-area .about-content .text-style {
-  color: #fff;
+  color: rgb(0, 0, 0);
   margin-right: 0;
 }
 @media only screen and (max-width: 767px) {
@@ -8034,6 +8034,7 @@ table p {
 .donate-area.donate-default-area {
   overflow: hidden;
   padding: 105px 0 104px;
+ 
 }
 @media only screen and (max-width: 1199px) {
   .donate-area.donate-default-area {
@@ -8093,6 +8094,7 @@ table p {
 }
 .donate-area.donate-default-area .donate-form:before {
   background-color: #08242a;
+  
   border-radius: 50%;
   content: "";
   height: 724px;
@@ -8178,6 +8180,7 @@ table p {
   height: 58px;
   padding: 2px 0px;
   text-align: center;
+
 }
 .donate-form
   form
@@ -8511,6 +8514,7 @@ table p {
 }
 .icon-box-style1 .icon-box-item.item-two {
   background-color: #001d23;
+
 }
 .icon-box-style1 .icon-box-item.item-two .icon-box-top {
   left: -7px;
@@ -8972,6 +8976,7 @@ table p {
   border-radius: 0;
   box-shadow: none;
   color: #001d23;
+
   height: 55px;
   padding: 20px 20px;
 }
