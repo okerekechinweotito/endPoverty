@@ -19,7 +19,7 @@ header("Access-Control-Allow-Origin: *");
         }
 
         // Set the recipient email address.
-        $recipient = "your@email.here";
+        $recipient = "okerekechinweotito@gmail.com";
 
         // Set the email subject.
         $subject = "Virtuf - Test Mail From $name";
