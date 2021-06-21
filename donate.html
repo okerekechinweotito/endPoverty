@@ -134,33 +134,20 @@
                     <h2 class="title text-white">Donate Now</h2>
                     <img class="line-shape" src="assets/img/shape/line-t3.png" alt="Image-endPoverty">
                   </div>
-                  <form action="#">
-                    <div class="amount-info">
-                      <div class="donate-amount">$20</div>
-                      <div class="donate-amount">$50</div>
-                      <div class="donate-amount">$200</div>
-                      <div class="donate-amount donate-custom-amount">
-                        <input class="form-control" type="text" placeholder="Custom">
-                      </div>
-                    </div>
-                    <div class="payment-method-wrp">
-                      <h4>Payment Method:</h4>
-                      <div class="payment-method">
-                        <div class="payment-type">
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                            <label class="form-check-label" for="inlineRadio1">Offline</label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                            <label class="form-check-label" for="inlineRadio2">Credit Card</label>
-                          </div>
+
+                  <div class="payment-method-wrp">
+                    <h4>Payment Method:</h4>
+                    <div class="payment-method">
+                      <div class="payment-type">
+                        <div class="form-check form-check-inline">
+                          <a href="contact.html" class="btn-theme btn-gradient btn-slide">Donate Offline <img class="icon icon-img" src="assets/img/icons/arrow-line-right2.png" alt="Icon"></a>
                         </div>
-                        <img src="assets/img/photos/payment-card.png" alt="Image-endPoverty">
-                      </div>
-                    </div>
+                   
+                  </div>
+
+                  <form id="paymentForm">
                     <div class="personal-info">
-                      <h4>Personal Info:</h4>
+                      <h4>Donate Online</h4>
                       <div class="row row-gutter-20">
                         <div class="col-md-6">
                           <div class="form-group">
@@ -169,7 +156,7 @@
                         </div>
                         <div class="col-md-6">
                           <div class="form-group">
-                            <input class="form-control" type="email" name="con_email" placeholder="Email">
+                            <input id="email-address" class="form-control" type="email" name="con_email" placeholder="Email">
                           </div>
                         </div>
                         <div class="col-md-6">
@@ -177,21 +164,16 @@
                             <input class="form-control" type="text" name="con_phone" placeholder="Phone">
                           </div>
                         </div>
-                        <div class="col-md-6">
-                          <div class="form-group">
-                            <input class="form-control" type="text" name="con_address" placeholder="Address">
+                        <div class="amount-info">
+                          <div class="donate-amount donate-custom-amount">
+                            <input class="form-control" id="amount" type="text"  placeholder="Enter The Amount">
                           </div>
                         </div>
-                        <div class="col-md-12">
-                          <div class="form-group mb-0">
-                            <textarea class="form-control textarea" name="con_message" placeholder="Message"></textarea>
-                          </div>
-                        </div>
+                                                
                       </div>
                     </div>
                     <div class="btn-wrp">
-                      <a href="#/" class="btn-theme btn-gradient btn-slide">Donate Now <img class="icon icon-img" src="assets/img/icons/arrow-line-right2.png" alt="Icon"></a>
-                      <a href="#/" class="btn-theme btn-gradient btn-border">Total Donation: $50</a>
+                     <button type="submit" class="btn-theme btn-gradient btn-slide">Donate Now<img class="icon icon-img" src="assets/img/icons/arrow-line-right2.png" alt="Icon"></button>
                     </div>
                   </form>
                   <div class="layer-style">
@@ -389,6 +371,38 @@
     </div>
 
 <!--=======================Javascript============================-->
+<!--=======================Donation Script============================-->
+
+<script src="https://js.paystack.co/v1/inline.js"></script> 
+
+<script>
+  const paymentForm = document.getElementById('paymentForm');
+  paymentForm.addEventListener("submit", payWithPaystack, false);
+  function payWithPaystack(e) {
+    e.preventDefault();
+    let handler = PaystackPop.setup({
+      key: 'pk_test_29a7c063729105f4ad40cf7be7bb49b95d1fb1a8', // Replace with your public key
+      email: document.getElementById("email-address").value,
+      currency: "NGN",
+      amount: document.getElementById("amount").value * 100,
+      ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
+      // label: "Optional string that replaces customer email"
+      onClose: function(){
+         
+        alert('Window closed.');
+      },
+      callback: function(response){
+          window.location = "succes.html";
+        let message = 'Payment complete! Reference: ' + response.reference;
+        alert(message);
+      }
+    });
+    handler.openIframe();
+  }
+</script>
+<!--=======================Donation Script============================-->
+
+
 
 <!--=== Modernizr Min Js ===-->
 <script src="assets/js/modernizr.js"></script>
