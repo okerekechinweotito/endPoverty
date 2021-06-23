@@ -116,7 +116,7 @@
           <div class="col-lg-12">
             <div class="page-title-content text-center">
               <h2 class="title text-white">Donate</h2>
-              <div class="bread-crumbs"><a href="index.html">Home<span class="breadcrumb-sep">//</span></a><span class="active">Donate</span></div>
+              <div class="bread-crumbs"><a href="index.html">Home<span class="breadcrumb-sep">//</span></a><span class="active">Successfull</span></div>
             </div>
           </div>
         </div>
@@ -127,61 +127,14 @@
     <!--== Start Contact Area ==-->
     <section class="contact-area">
      
-
-                <div class="donation-form bgcolor-theme3">
-                  <div class="section-title">
-                    <h5 class="subtitle line-theme-color mb-14">Make A Donation</h5>
-                    <h2 class="title text-white">Donate Now</h2>
-                    <img class="line-shape" src="assets/img/shape/line-t3.png" alt="Image-endPoverty">
-                  </div>
-
-                  <div class="payment-method-wrp">
-                    <h4>Payment Method:</h4>
-                    <div class="payment-method">
-                      <div class="payment-type">
-                        <div class="form-check form-check-inline">
-                          <a href="contact.html" class="btn-theme btn-gradient btn-slide">Donate Offline <img class="icon icon-img" src="assets/img/icons/arrow-line-right2.png" alt="Icon"></a>
-                        </div>
-                   
-                  </div>
-
-                  <form id="paymentForm">
-                    <div class="personal-info">
-                      <h4>Donate Online</h4>
-                      <div class="row row-gutter-20">
-                        <div class="col-md-6">
-                          <div class="form-group">
-                            <input class="form-control" type="text" name="con_name" placeholder="Name" required>
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="form-group">
-                            <input id="email-address" class="form-control" type="email" name="con_email" placeholder="Email" required>
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="form-group">
-                            <input class="form-control" type="text" name="con_phone" placeholder="Phone" required>
-                          </div>
-                        </div>
-                        <div class="amount-info">
-                          <div class="donate-amount donate-custom-amount">
-                            <input class="form-control" id="amount" type="text"  placeholder="Enter The Amount" required>
-                          </div>
-                        </div>
-                                                
-                      </div>
-                    </div>
-                    <div class="btn-wrp">
-                     <button type="submit" class="btn-theme btn-gradient btn-slide">Donate Now<img class="icon icon-img" src="assets/img/icons/arrow-line-right2.png" alt="Icon"></button>
-                    </div>
-                  </form>
-                  <div class="layer-style">
-                    <img class="layer-style1" src="assets/img/shape/form-shape1.png" alt="Image-endPoverty">
-                    <img class="layer-style2" src="assets/img/shape/form-shape2.png" alt="Image-endPoverty">
-                  </div>
-                </div>
-              </div>
+        <div class="donation-form bgcolor-theme3">
+            <div class="section-title">
+              <h5 class="subtitle line-theme-color mb-14">Donation Recieved</h5>
+              <h2 class="title text-white">Thanks For Your Donation</h2>
+              <img class="line-shape" src="assets/img/shape/line-t3.png" alt="Image-endPoverty">
+            </div>
+        </div>
+              
     </section>
     <!--== End Contact Area ==-->
   </main>
@@ -371,36 +324,7 @@
     </div>
 
 <!--=======================Javascript============================-->
-<!--=======================Donation Script============================-->
 
-<script src="https://js.paystack.co/v1/inline.js"></script> 
-
-<script>
-  const paymentForm = document.getElementById('paymentForm');
-  paymentForm.addEventListener("submit", payWithPaystack, false);
-  function payWithPaystack(e) {
-    e.preventDefault();
-    let handler = PaystackPop.setup({
-      key: 'pk_test_29a7c063729105f4ad40cf7be7bb49b95d1fb1a8', // Replace with your public key
-      email: document.getElementById("email-address").value,
-      currency: "NGN",
-      amount: document.getElementById("amount").value * 100,
-      ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
-      // label: "Optional string that replaces customer email"
-      onClose: function(){
-         
-        alert('Window closed.');
-      },
-      callback: function(response){
-          window.location = "success.html";
-        let message = 'Payment complete! Reference: ' + response.reference;
-        alert(message);
-      }
-    });
-    handler.openIframe();
-  }
-</script>
-<!--=======================Donation Script============================-->
 
 
 
